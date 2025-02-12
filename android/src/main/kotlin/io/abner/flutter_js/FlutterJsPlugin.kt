@@ -9,7 +9,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+//import io.flutter.plugin.common.PluginRegistry.Registrar
 import android.os.Looper
 import android.os.Handler
 // import fi.iki.elonen.NanoHTTPD
@@ -22,6 +22,7 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 data class MethodChannelResult(val success: Boolean, val data: Any? = null)
+
 
 /** FlutterJsPlugin */
 class FlutterJsPlugin : FlutterPlugin, MethodCallHandler {
@@ -50,11 +51,11 @@ class FlutterJsPlugin : FlutterPlugin, MethodCallHandler {
     companion object {
 
 
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val instance = FlutterJsPlugin()
-            instance.onAttachedToEngine(registrar.context(), registrar.messenger())
-        }
+//        @JvmStatic
+//        fun registerWith(registrar: Registrar) {
+//            val instance = FlutterJsPlugin()
+//            instance.onAttachedToEngine(registrar.context(), registrar.messenger())
+//        }
 
         var jsEngineMap = mutableMapOf<Int, JSEngine>()
     }
